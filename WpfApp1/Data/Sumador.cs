@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace WpfApp1.Data
 {
+    /// <summary>
+    /// Solicitado:
+    /// MainWindows.xaml.cs
+    /// </summary>
     public class Sumador
     {
 
