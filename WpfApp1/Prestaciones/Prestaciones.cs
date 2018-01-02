@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+
+[assembly: InternalsVisibleTo("UnitTestProject1")]
 
 namespace WpfApp1.Prestaciones
 {
@@ -26,7 +29,7 @@ namespace WpfApp1.Prestaciones
         /// <returns></returns>
         private DateTime convertToDatePartial(String date)
         {
-            DateTime dates = DateTime.ParseExact(date, "yyyy-MM-dd", System.Globalization.CultureInfo.InvariantCulture);
+            DateTime dates = DateTime.ParseExact(date, "yyyy-MM-dd", null);
             return dates;
         }
 
@@ -34,7 +37,7 @@ namespace WpfApp1.Prestaciones
         /// Calcula cantidad de años
         /// </summary>
         /// <returns></returns>
-        private int getYears()
+        public int getYears()
         {
             /// Retorna el total de años
             DateTime zeroTime = new DateTime(1, 1, 1);
@@ -54,7 +57,7 @@ namespace WpfApp1.Prestaciones
         /// Calcula dias Promedio + 1
         /// </summary>
         /// <returns></returns>
-        private int getDays()
+        public int getDays()
         {
             // returna el total Dias Promedio
             return 0;
@@ -66,7 +69,7 @@ namespace WpfApp1.Prestaciones
             return result;
         }
 
-        private Double getAuxilioCesantia()
+        private Double GetAuxilioCesantia()
         {
             Double result = Convert.ToDouble("0,00");
             return result;
